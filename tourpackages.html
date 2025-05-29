@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/hallies-logo.jpg" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header others" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo"><img src="assets/img/hallies-logo.jpg" /></a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="tourpackages.html" class="nav__link active-link">Tours & Packages</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link ">About Hallies</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact Hallies</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+        <!-- Tour Package Modal -->
+   <div id="crypto-modal" tabindex="-1" aria-hidden="true" class="increase fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="crypto-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <!-- Modal header -->
+            <div class="px-6 py-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-base font-semibold text-gray-900 lg:text-xl dark:text-white">
+                    Make A Reservation with Hallies
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6">
+              
+                <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Choose One Of Our Fabulous Tour Packages.</p>
+                
+                <form autocomplete="off">
+                  <div class="p-6">
+                            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">               
+                                  <input value="" type="text" name="Name" id="name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Enter Your Full Name" required />
+                            </a>
+                       
+                            <a class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                  <input value="" type="email" name="Email" id="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Enter Your Email address " required />
+                            </a>   
+                            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                  <input value="" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="Phone" id="phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Phone number (123-456-7890)" required />
+                            </a>   
+                            <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                  <select multiple  id="service" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>Choose Tour Packages</option>
+                                    <option>Dubai Package</option>
+                                    <option>Kenya Package</option>
+                                    <option>Mediterranean Package</option>
+                                    <option>Lebanon Package</option>
+                                    <option>Morocco Package</option>
+                                    <option>Thailand Package</option>
+                                    <option>Turkey Package </option>
+                                    <option>Europe Package</option>
+                                  </select>
+                            </a>   
+                           
+                    </ul>
+                    <div>
+                      <button
+                      onclick="gotowhatsapp()"
+                      class="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                      type="button"
+                      data-ripple-light="true"
+                    >
+                      Reserve
+                    </button>  
+                    </div>
+                </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>  
+<!--Study Abroad Modal--> 
+<div id="crypto-modal-1" tabindex="-1" aria-hidden="true" class="increase fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative w-full max-w-md max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="crypto-modal-1">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+              <span class="sr-only">Close modal</span>
+          </button>
+          <!-- Modal header -->
+          <div class="px-6 py-4 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-base font-semibold text-gray-900 lg:text-xl dark:text-white">
+                  Study Abroad with Hallies
+              </h3>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6">
+            
+              <p class="text-sm font-normal text-gray-500 dark:text-gray-400">.</p>
+              
+              <form autocomplete="off">
+                <div class="p-6">
+                          <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">               
+                                <input value="" type="text" name="Name" id="name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Enter Your Full Name" required />
+                          </a>
+                     
+                          <a class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                <input value="" type="email" name="Email" id="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Enter Your Email address " required />
+                          </a>   
+                          <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                <input value="" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="Phone" id="phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Phone number (123-456-7890)" required />
+                          </a>   
+                          <a  class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                <select multiple  id="service" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                  <option selected>Choose countries</option>
+                                  <option>United States</option>
+                                  <option>Canada</option>
+                                  <option>Europe</option>
+                                </select>
+                          </a>   
+                         
+                  </ul>
+                  <div>
+                    <button
+                    onclick="gotowhatsapp()"
+                    class="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-ripple-light="true"
+                  >
+                    Reserve
+                  </button>  
+                  </div>
+              </div>
+               </form>
+          </div>
+      </div>
+  </div>
+</div>  
+
+        <main class="main">
+            <!--==================== TOUR PACKAGES ====================-->
+            <div class="home" id="home">
+                <img src="assets/img/cityView.jpg" alt="" class=" tour_img">
+                <div class=" home__container">
+                    
+                    <h1 class="tour_title">Hallies Tour Packages</h1>
+            </div>
+            </div>
+           
+        
+            <section class="about section" id="about">
+                <!-- tour 1 -->
+                <div class="about__container container grid pstop">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Dubai Awaits: Your Ultimate Adventure with Hallies</h2>
+                        <p class="about__description">
+                            Dubai is packed with unforgettable experiences, and <b>Hallies</b> is your gateway to it all!
+                             Experience the best the <b>city</b> has to offer with our <b>exclusive Hotel & Ticket Packages</b>, 
+                             perfectly designed for your ultimate Dubai getaway.
+                         Whether you’re eager to explore the city on a City Tour, feel the rush of <b>Dune Bashing</b> 
+                         in the desert, marvel at the stunning beauty of the <b>Miracle Garden</b>, or indulge in a romantic 
+                         <b>Boat Cruise Dinner</b>, we’ve got everything you need for a <b>once-in-a-lifetime</b> vacation.
+
+                        </p>
+                        <a  data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" class="button">Book Now</a>
+                    </div>
+
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/pexels-evonics-2086765.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/camel riding.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/tour-miracle garden.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/burj khalifa.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 5 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <img src="assets/img/dune-bashing.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+              </div>
+            
+                    </div>
+                    </div>
+                </div>
+
+                <!--Europe tour 2 -->
+
+                <div class="about__container container grid pstop">
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/europe-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/europe-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/europe-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/europe-4.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 5 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <img src="assets/img/europe-5.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+              </div>
+            
+                    </div>
+                    </div>
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">12-Day Holiday Retreat in Europe – Your Dream European Escape with Hallies!</h2>
+                        <p class="about__description">
+                            Ready for the ultimate European getaway? Hallies presents a luxurious 12-Day Holiday Retreat in Europe, where you’ll immerse yourself in the finest experiences this captivating continent has to offer. From historic cities to picturesque landscapes, this is your chance to explore Europe in all its splendor, in style and comfort.
+
+                            Imagine strolling through the romantic streets of Paris, indulging in delicious Italian cuisine in Rome, discovering the art and culture of Barcelona, or experiencing the enchanting charm of the Swiss Alps. Whether you’re looking for history, adventure, or relaxation, our European retreat is tailored to create the perfect balance of exploration and rejuvenation.
+                        </p>
+                        <a class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" >Book Now</a>
+                    </div>
+
+                    
+                </div>
+
+                <!--lebanon tour 3 -->
+
+                <div class="about__container container grid pstop">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">6 Days and Nights Tour of Lebanon – An Unforgettable Adventure Awaits!
+                        </h2>
+                        <p class="about__description">
+                            Lebanon is a country filled with history, beauty, and culture, and Hallies is your gateway to it all! Embark on an unforgettable 6 Days and Nights Tour of Lebanon, where every moment is designed for your ultimate adventure. From the moment you arrive, enjoy comfortable hotel accommodations with everything arranged, including your tickets for each experience and seamless return airport transfers.
+                            Discover the iconic Pigeons Rock in Beirut, take in the lively atmosphere at Zaytouna Bay Downtown, and dive deep into Lebanon's rich culture and breathtaking landscapes. Whether it's strolling through vibrant streets or exploring hidden gems, every part of this tour is tailored to create memories you’ll cherish forever.
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal">Book Now</a>
+                    </div>
+
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/lebanon-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/lebanon-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/lebanon-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/lebanon-4.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+              </div>
+            
+                    </div>
+                    </div>
+                </div>
+
+                <!--Turkey tour 4 -->
+
+                <div class="about__container container grid pstop">
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/turkey-7.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/turkey-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/turkey-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/turkey-5.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 5 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <img src="assets/img/turkey-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+              </div>
+            
+                    </div>
+                    </div>
+                    <div class="about__data">
+                        <h2 class="section__title about__title">9 Days of Turkey – A Majestic Adventure with Hallies!</h2>
+                        <p class="about__description">
+                            Turkey is a land of rich history, stunning landscapes, and unforgettable experiences, and Hallies is your gateway to it all! Embark on a remarkable 9 Days of Turkey tour, designed to take you through the best that this incredible country has to offer. From luxurious hotel accommodations and all your tickets arranged to visa and insurance coverage, we’ve got everything planned for you. Enjoy return airport transfers to ensure a smooth arrival and departure.
+
+                            Indulge in breakfast, lunch, and dinner each day, with authentic Turkish cuisine to fuel your adventures. Explore the mesmerizing Pamukkale Tour daily, marvel at the ancient Aspendos Theatre, and ring in the new year with a spectacular New Year Gala. And that’s just the beginning—there are plenty more breathtaking experiences awaiting you in Turkey.
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" >Book Now</a>
+                    </div>
+
+                   
+                </div>
+
+                <!--Mediterranean tour 5 -->
+
+                <div class="about__container container grid pstop">
+
+                   
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Tour the Mediterranean – A Journey Like No Other with Hallies!</h2>
+                        <p class="about__description">
+                            The Mediterranean is waiting for you, and Hallies is your perfect gateway to this unforgettable experience. For just ₦ 6,500,000, embark on a dream vacation, where every detail is taken care of. From luxurious hotel accommodations to all your tickets arranged, we ensure a smooth and seamless journey. Your visa and insurance are handled, and you’ll enjoy return airport transfers for ultimate convenience.
+
+                            Start each day with a delicious breakfast included in your package, then dive into adventure with scuba diving in the crystal-clear Mediterranean waters, followed by thrilling hiking through stunning landscapes. The best part? You can customize your tour to fit your tastes and make this trip as unique as you are.
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal">Book Now</a>
+                    </div>
+
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+               <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                   <img src="assets/img/Mediterranean-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+               </div>
+               <!-- Item 2 -->
+               <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                   <img src="assets/img/Mediterranean-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+               </div>
+               <!-- Item 3 -->
+               <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                   <img src="assets/img/Mediterranean-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+               </div>
+               <!-- Item 4 -->
+               <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                   <img src="assets/img/Mediterranean-4.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+               </div>
+               <!-- Item 5 -->
+               <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                   <img src="assets/img/Mediterranean-5.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+               </div>
+           </div>
+
+            
+                    </div>
+                    </div>
+                </div>
+
+                <!--morocco tour 6 -->
+
+
+                <div class="about__container container grid pstop">
+                    
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/morocco-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/morocco-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/morocco-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/morocco-4.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                
+              </div>
+            
+                    </div>
+                    </div>
+                    <div class="about__data">
+                        <h2 class="section__title about__title">5 Days & Nights Tour of Morocco – Your Perfect Moroccan Escape</h2>
+                        <p class="about__description">
+                            Morocco offers a rich cultural experience, incredible landscapes, and thrilling adventures, and Hallies is here to guide you through it all. Spend 5 days & nights in Morocco, and immerse yourself in the beauty of this historic destination. With hotel accommodations and tickets arranged, you can focus on enjoying the sights, while visa and insurance are taken care of. Return airport transfers ensure a stress-free journey from arrival to departure.
+
+Indulge in breakfast, lunch, and dinner, included throughout your stay. Visit the iconic YSL Museum, enjoy a horse carriage experience through Morocco’s charming streets, and feel the adrenaline rush of quad biking at Palmeraie. From vibrant culture to adventurous thrills, we’ve got everything you need!
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal">Book Now</a>
+                    </div>
+
+                </div>
+
+
+                <!--Thailand tour 7 -->
+                 
+                <div class="about__container container grid pstop">
+                  
+                    <div class="about__data">
+                        <h2 class="section__title about__title">12 Nights in Thailand – Discover the Land of Smiles with Hallies!</h2>
+                        <p class="about__description">
+                            Thailand is an enchanting destination with golden temples, bustling markets, and stunning beaches, and Hallies is your gateway to it all! Experience 12 Nights in Thailand, where adventure and relaxation blend seamlessly. From your hotel accommodations and tickets to visa and insurance, we’ve taken care of every detail. Enjoy return airport transfers for smooth arrivals and departures.
+
+                        Delight in thrilling island tours, experience the famous floating market, and embark on exciting adventures like safari, snow world, and ATV rides. Cool off in a world of fun at the water park and much more!
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal">Book Now</a>
+                    </div>
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/thailand-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/thailand-6.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/thailand-4.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/thailand-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 5 -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                      <img src="assets/img/thailand-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+              </div>
+            
+                    </div>
+                    </div>
+                    
+                </div>
+
+                <!--Kenya tour 8 -->
+
+                <div class="about__container container grid pstop">
+                    <div class="max-w-xl">
+                        <div id="gallery" class="relative w-full" data-carousel="slide">
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                   <!-- Item 1 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/kenya-1.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item="active">
+                      <img src="assets/img/kenya-2.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/kenya-3.jpg" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-700 ease-in-out " data-carousel-item>
+                      <img src="assets/img/kenya-4.webp" class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                  </div>
+                 
+              </div>
+            
+                    </div>
+                    </div>
+                    <div class="about__data">
+                        <h2 class="section__title about__title">A Week in Kenya – Your Ultimate African Getaway</h2>
+                        <p class="about__description">
+                            Kenya offers breathtaking safaris, stunning landscapes, and unforgettable experiences, and Hallies is your perfect guide to it all! Spend a week in Kenya, and immerse yourself in the heart of East Africa’s rich culture and natural beauty. From hotel accommodations and tickets arranged for you to visa and insurance, everything is taken care of. Enjoy return airport transfers and embark on a boat ride of Lake Naivasha, where you can soak in the incredible wildlife and scenic beauty.
+
+                            Explore the vibrant Center Excursion and shop at the Two Rivers Mall, then dive into adventure with a scuba diving experience like no other. Want to make your trip even more special? Customize your tour to match your unique preferences. Kenya awaits!
+
+
+                        </p>
+                        <a  class="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal">Book Now</a>
+                    </div>
+
+                    
+                </div>
+
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">Study Abroad <br> With Hallies Travels</h2>
+
+                <div class="experience__container container grid">
+                    <h3 class="section__title">Over</h3>
+
+                
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">100+</h2>
+                            <span class="experience__description">University <br> Partnership</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">500+</h2>
+                            <span class="experience__description">International<br> Students enrolled</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">100+</h2>
+                            <span class="experience__description"> Destination</span>
+                        </div>
+                    </div>
+                    <h2 class="section__title about__title">Your Pathway to Global Education!</h2>
+                    <p class="about__description">Ready to take your education to the next level? Whether you're looking to pursue undergraduate studies, explore graduate programs, or even gain valuable short-term learning experiences,
+                        <b>Hallies</b> is your trusted partner in studying abroad. Explore top destinations like the <b>UK, USA, Canada</b>, and many more—where world-class education meets cultural adventure.
+                    </p>
+                    
+                    
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="assets/img/purdue campus.jpg" alt="" class="experience__img-one">
+                        </div>
+                        
+                        <div class="experience__overlay">
+                            <img src="assets/img/study abroad.jpg" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+         
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container  grid">
+                    <div class="about__data">
+                       
+
+                        <span class="experience__description">With <b>Hallies</b>, you’ll receive expert guidance every step of the way. 
+                            From <b>choosing the right course</b> and <b>university</b> to <b>visa assistance</b> and <b>insurance</b>, 
+                            we’ve got you covered. Our team will help you with <b>application processing</b>, securing <b>accommodation</b>, and <b>pre-departure support</b> 
+                            so you can focus on making the most of your academic journey abroad.
+    
+                        </span>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="assets/img/abroad student.jpg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="assets/img/campus.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                    <a  class="button" style="text-align: center;" data-modal-target="crypto-modal-1" data-modal-toggle="crypto-modal-1">Study Now</a>
+                </div>
+                <div class="about__data about__list">
+                    <h2 class="section__title about__title">Why Study Abroad with Hallies?</h2>
+                    <ul class="about__description">
+                        <li class="about__text"><b>Top Universities:</b>Access some of the best universities in the world with a wide range of courses and programs.</li>
+                        <li class=" about__text"><b>Personalized Guidance:</b>Access some of the best universities in the world with a wide range of courses and programs.</li>
+                        <li class=" about__text"><b>Visa & Immigration Assistance:</b>Access some of the best universities in the world with a wide range of courses and programs.</li>
+                        <li class=" about__text"><b>Safe & Comfortable Travel:</b>Access some of the best universities in the world with a wide range of courses and programs.</li>
+                        <li class=" about__text"><b>Scholarship & Financial Support:</b>Access some of the best universities in the world with a wide range of courses and programs.</li>
+                        
+                    </ul>
+                </div>
+              
+            </section>
+
+        </main>
+         <!--==================== FOOTER ====================-->
+         <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Hallies Travels</h3>
+                        <p class="footer__description"> you choose the <br> destination, 
+                            we offer you the <br> experience.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">Our Services</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="about.html" class="footer__link">Our Founder</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Tour Packages</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="tourpackages.html" class="footer__link">Dubai</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="tourpackages.html" class="footer__link">Turkey</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="tourpackages.html" class="footer__link">Maldives</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="contact.html" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="contact.html" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="contact.html" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2024 Hallies Travels LTD. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        
+    </body>
+    </html>

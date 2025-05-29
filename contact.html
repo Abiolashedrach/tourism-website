@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/hallies-logo.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
+        
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Contact Hallies Travels</title>
+</head>
+<body>
+    <header class="header black_list" id="header">
+        <nav class="nav container ">
+            <a href="#" class="nav__logo"><img src="assets/img/hallies-logo.jpg" alt="Hallies Travels"></a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list ">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="tourpackages.html" class="nav__link">Tours & Packages</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About Hallies</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active-link">Contact Hallies</a></li>
+                </ul>
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact__container container ">
+                <div class="contact__info">
+                    <h2 class="section__title contact__title">Get in Touch</h2>
+                    <p class="contact__description">
+                        We'd love to hear from you! Whether you have a question or need assistance, feel free to contact us.
+                    </p>
+                    <div class="contact__details">
+                        <div class="contact__item ">
+                            <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7301901070246!2d7.4696846000000034!3d9.0836263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0be5f69b4367%3A0xa1232c0ee6573e06!2sHallies%20Travels%20Ltd!5e0!3m2!1sen!2sng!4v1737324516232!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contact__textinfo">
+
+                       
+                        <div class="contact__item hty1 ">
+                            <h4 class="section__title contact__title">Hotline</h4>
+                            <span class="contact__text">+23480151088535</span>
+                            </div>
+                            <div class="contact__item hty1 ">
+                                <h4 class="section__title contact__title">Email Address</h4>
+                            <span class="contact__text">halliestravels@gmail.com</a ></span>
+                        </div>
+                        <div class="contact__item hty1 ">
+                            <h4 class="section__title contact__title">Office Address</h4>
+                            <span class="contact__text">BPS 20 OLD BANEX PLAZA WUSE 2 ABUJA </span>
+                        </div>
+                    </div>
+                       
+                    </div>
+                </div>
+
+                
+                <h2 class="section__title contact__title">Contact Us</h2>
+                <form id="contact-form" class="max-w-md mx-auto">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
+                        <input type="text" id="name" name="name" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5" required>
+                    </div>
+                    
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
+                        <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                    </div>
+
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Mobile Number</label>
+                        <input type="text" id="phone" name="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                    </div>
+
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                    <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..." required></textarea>
+
+                    <button type="button" onclick="submitForm()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+                </form>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">Hallies Travels</h3>
+                    <p class="footer__description">You choose the <br> destination, we offer you the <br> experience.</p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social"><i class="ri-twitter-fill"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social"><i class="ri-instagram-fill"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item"><a href="about.html" class="footer__link">About Us</a></li>
+                        <li class="footer__item"><a href="about.html" class="footer__link">Our Services</a></li>
+                        <li class="footer__item"><a href="about.html" class="footer__link">Our Founder</a></li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Tour Packages</h3>
+                    <ul>
+                        <li class="footer__item"><a href="tourpackages.html" class="footer__link">Dubai</a></li>
+                        <li class="footer__item"><a href="tourpackages.html" class="footer__link">Turkey</a></li>
+                        <li class="footer__item"><a href="tourpackages.html" class="footer__link">Maldives</a></li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item"><a href="contact.html" class="footer__link">FAQs</a></li>
+                        <li class="footer__item"><a href="contact.html" class="footer__link">Support Center</a></li>
+                        <li class="footer__item"><a href="contact.html" class="footer__link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2025 Hallies Travels LTD. All rights reserved.</p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS User ID
+
+        function submitForm() {
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+
+            // Construct WhatsApp URL
+            const whatsappMessage = `*New Message from Website*\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+            const whatsappURL = `https://wa.me/8151088535?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, "_blank");
+
+            // Send email via EmailJS
+            const emailData = {
+                from_name: name,
+                from_email: email,
+                phone: phone,
+                message: message
+            };
+
+            emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', emailData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert("Your message has been sent successfully!");
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert("Oops! Something went wrong. Please try again later.");
+                });
+        }
+    </script>
+</body>
+</html>
